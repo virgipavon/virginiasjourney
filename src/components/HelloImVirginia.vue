@@ -1,32 +1,74 @@
 <script setup>
+  import Intro from './Intro.vue'
+  import WorkExperience from './WorkExperience.vue'
+  import Studies from './Studies.vue'
+  import Languages from './Languages.vue'
+  import SoftSkills from './SoftSkills.vue'
+  import NextSteps from './NextSteps.vue'
+
   import gsap from "gsap";
   import { onMounted } from "vue";
   import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import { ScrollSmoother } from "gsap/ScrollSmoother";
 
-  gsap.registerPlugin(ScrambleTextPlugin)
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrambleTextPlugin);
 
   onMounted(() => {
+
+    ScrollSmoother.create({
+      smooth: 1,
+      effects: true,
+      smoothTouch: 0.1,
+    });
+
+    const markers = [
+      ".marker-exp",
+      ".marker-stu",
+      ".marker-lang",
+      ".marker-skills",
+      ".marker-next"
+    ];
+
+    for (let i = 0; i < markers.length - 1; i++) {
+      const current = markers[i];
+      const next = markers[i + 1];
+
+      gsap.fromTo(
+        current,
+        { opacity: 1 },
+        {
+          opacity: 0,
+          scrollTrigger: {
+            trigger: current,
+            start: "center center",
+            endTrigger: next,
+            end: "center+=400 center",
+            scrub: 0.3,
+            pin: true,
+            pinSpacing: false
+          }
+        }
+      );
+
+    }
+
+    ScrollTrigger.create({
+      trigger: markers[markers.length - 1],
+      start: "center center",
+      end: () => `${document.body.scrollHeight - window.innerHeight}px`,
+      pin: true,
+      pinSpacing: false
+    });
      
-    gsap.to("#heading", 3, {
-      delay: 1.5,
+    gsap.to("#heading", {
+      duration: 1.5,
       scrambleText: {
-        text: "¡Hola! Me llamo Virginia",
+        text: "Me llamo Virginia",
         chars: "lowercase",
         tweenLength: true
       }
     });
-    gsap.fromTo(
-      "#heading",
-      {
-        opacity: 0,
-        x: "-100%",
-      },
-      {
-        duration: 1.5,
-        opacity: 1,
-        x: 0,
-      }
-    );
 
     gsap.fromTo(
     "#description",
@@ -82,17 +124,20 @@
       },
     }
   );
+
+  ScrollTrigger.refresh()
   })
 </script>
 
 <template>
-  <div class="min-h-screen">
-    <div>
-      <div class="py-12 px-32 flex flex-col items-center justify-center min-h-screen">
+  <div id="smooth-wrapper" class="min-h-screen py-12 px-52">
+    <div id="smooth-content">
+      <div class="flex flex-col items-center justify-center min-h-screen">
+        <h1>¡Hola!</h1>
         <h1
           class="overflow-hidden pb-5 font-bold text-7xl text-transparent bg-clip-text bg-gradient-to-br from-[#f1ffa0] to-[#00a89d]"
           id="heading">
-          ¡Hola!
+          Me llamo Virginia
         </h1>
         <p class="mt-8 text-xl text-gray-400 text-center" id="description">
           Soy Frontend developer, con más de 10 años de experiencia escribiendo código para proyectos reales. De cuando testeábamos en internet explorer.
@@ -129,99 +174,17 @@
         </div>
       </div>
 
-      <div class="py-12 px-32 flex flex-col items-center justify-center min-h-screen bg-emerald">
-        <h3
-          class="overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#f1ffa0] to-[#00a89d]">
-          Trabajo en desarrollo web desde que las webs se veían en Internet Explorer… y sobreviví.
-        </h3>
-        <p class="mt-8 text-xl text-gray-400 text-center" id="description">
-          Mi fuerte es el frontend moderno: Vue, Angular, Tailwind, Vite.
-          Y también he tenido mis batallas con WordPress, Drupal o Typo3.
-          Lo importante: sé adaptarme, sé leer código ajeno, y me importa que lo que entrego sea accesible, mantenible y limpio.
-        </p>
-      </div>
+      <Intro/>
 
-      <div class="py-12 px-32 flex flex-col items-center justify-center min-h-screen bg-emerald">
-        <h3
-          class="overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#f1ffa0] to-[#00a89d]">
-          Estos son algunos de los sitios en los que han contando conmigo
-        </h3>
-        <div class="flex mb-6">
-          <div class="w-1/2 mr-1">
-            <h5>INECO (2023 – ahora)</h5>
-            <p>Actualmente trabajo en INECO, desarrollando con Angular y Vue, y jugando con servicios de AWS: Cognito, Amplify, Lambda…
-              También me encargo de automatizaciones con GitLab.
-              Las reuniones son en GMT, pero yo sigo programando en CET con café.</p>
-          </div>
-          <div class="w-1/2 ml-1">
-            <h5>UNIR (2020 – 2023)</h5>
-            <p>Tres años manteniendo la web institucional de UNIR. WordPress, estructura heredada, plugins que no firmaría nadie.
-              Aun así, metí mejoras donde se podía: accesibilidad, rendimiento, pequeños scripts.
-              Fue duro, pero aprendí una barbaridad.</p>
-          </div>
-        </div>
-        <div class="flex">
-          <div class="w-1/2 mr-1">
-            <h5>ELEGRA / Ferrovial (2019 – 2020)</h5>
-            <p>Aquí hice una de las cosas que más me enorgullece:
-              la web corporativa de Ferrovial, que ganó premios internacionales.
-              Yo me ocupé de gran parte de la accesibilidad AA (WCAG 2.1), algo que me tomé muy en serio.
-              Usamos Vue, Sass, Pug y… Gulp. Sí, Gulp. Qué tiempos.</p>
-          </div>
-          <div class="w-1/2 ml-1">
-            <h5>También trabajé en ARCMEDIA</h5>
-            <p>donde empecé en serio con portales grandes, multilingües y bastante más exigentes de lo que esperaba.
-              Ahí aprendí a optimizar, a trabajar en equipo, y a no subestimar el CSS de nadie.</p>
-          </div>
-        </div>
-      </div>
+      <WorkExperience/>
 
-      <div class="py-12 px-32 flex flex-col items-center justify-center min-h-screen bg-emerald">
-        <h3
-          class="overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#f1ffa0] to-[#00a89d]">
-          Estudié desarrollo de aplicaciones informáticas
-        </h3>
-        <p class="mt-8 text-xl text-gray-400 text-center" id="description">
-          Y luego me especialicé en diseño, desarrollo y comunicación digital.
-          Aprendí tanto de diseño como de código. Y creo que se nota.
-        </p>
-      </div>
+      <Studies />
 
-      <div class="py-12 px-32 flex flex-col items-center justify-center min-h-screen bg-emerald">
-        <h3
-          class="overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#f1ffa0] to-[#00a89d]">
-          Y sí, hablo inglés
-        </h3>
-        <p class="mt-8 text-xl text-gray-400 text-center" id="description">
-          Nivel C1. Me he acostumbrado a leer documentación en inglés, 
-          trabajar con gente de otros países y discutir con APIs sin subtítulos.
-        </p>
-      </div>
+      <Languages />
 
-      <div class="py-12 px-32 flex flex-col items-center justify-center min-h-screen bg-emerald">
-        <h3
-          class="overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#f1ffa0] to-[#00a89d]">
-          ¿En qué soy buena?
-        </h3>
-        <ul class="mt-8 text-xl text-gray-400">
-          <li>En escribir código limpio que se pueda mantener.</li>
-          <li>En detectar lo que va a dar problemas antes de que lo dé.</li>
-          <li>En accesibilidad, en pensar en usuarios reales.</li>
-          <li>Y en no rendirme cuando algo se rompe, aunque el error empiece con “undefined is not a function”.</li>
-        </ul>
-      </div>
+      <SoftSkills />
 
-      <div class="py-12 px-32 flex flex-col items-center justify-center min-h-screen bg-emerald">
-        <h3
-          class="overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#f1ffa0] to-[#00a89d]">
-          ¿Y ahora qué?
-        </h3>
-        <p class="mt-8 text-xl text-gray-400 text-center" id="description">
-          Ahora quiero seguir creciendo.
-          Meterme más en backend, en IA aplicada, en proyectos donde se valore el cuidado del código.
-          Y si puede ser, con un equipo humano y sentido del humor.
-        </p>
-      </div>
+      <NextSteps />
 
     </div>
   </div>
