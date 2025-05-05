@@ -29,7 +29,7 @@ Cada vez que actualizo el contenido, GitHub Actions se encarga de:
 
 ## 🚀 ¿Quieres verlo?
 
-👉 [**Demo en vivo**](https://tusitio.com) (cuando lo suba, eh, no me agobies).
+👉 [**Demo en vivo**](https://virgipavon.github.io/virginiasjourney/) (cuando lo suba, eh, no me agobies).
 
 ---
 
