@@ -43,7 +43,7 @@
             trigger: current,
             start: "center center",
             endTrigger: next,
-            end: "center+=400 center",
+            end: "center+=1000 center",
             scrub: 0.3,
             pin: true,
             pinSpacing: false
@@ -130,15 +130,15 @@
 </script>
 
 <template>
-  <div id="smooth-wrapper" class="min-h-screen py-12 px-52">
+  <div id="smooth-wrapper" class="min-h-screen py-12 px-10">
     <div id="smooth-content">
       <div class="flex flex-col items-center justify-center min-h-screen">
         <h1>¡Hola!</h1>
-        <h1
-          class="overflow-hidden pb-5 font-bold text-7xl text-transparent bg-clip-text bg-gradient-to-br from-[#f1ffa0] to-[#00a89d]"
+        <h2
+          class="text-center overflow-hidden pb-5 font-bold text-7xl text-transparent bg-clip-text bg-gradient-to-br from-[#f1ffa0] to-[#00a89d]"
           id="heading">
           Me llamo Virginia
-        </h1>
+        </h2>
         <p class="mt-8 text-xl text-gray-400 text-center" id="description">
           Soy Frontend developer, con más de 10 años de experiencia escribiendo código para proyectos reales. De cuando testeábamos en internet explorer.
         </p>
