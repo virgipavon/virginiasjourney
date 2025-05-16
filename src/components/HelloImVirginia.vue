@@ -130,7 +130,7 @@
 </script>
 
 <template>
-  <div id="smooth-wrapper" class="min-h-screen py-12 px-10">
+  <div id="smooth-wrapper" class="min-h-screen py-12 px-10 lg:px-52">
     <div id="smooth-content">
       <div class="flex flex-col items-center justify-center min-h-screen">
         <h1>¡Hola!</h1>
