@@ -4,6 +4,11 @@
   import { ScrollSmoother } from "gsap/ScrollSmoother";
   import { onMounted } from "vue";
 
+  import { useCV } from '../composables/useCV'
+
+  const { sections, getSectionById } = useCV()
+  const summary = getSectionById('summary')
+
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
   onMounted(() => {
@@ -17,18 +22,16 @@
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen bg-emerald relative">
-    <div class="smooth-wrapper h-full">
+  <div v-if="summary" class="flex flex-col items-center justify-center min-h-screen bg-emerald relative">
+    <div class="smooth-wrapper min-h-screen">
       <div class="smooth-content will-change-transform h-full">
         <div>
           <h3
             class="overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#f1ffa0] to-[#00a89d]">
-            Trabajo en desarrollo web desde que las webs se veían en Internet Explorer… y sobreviví.
+            {{ summary.title }}
           </h3>
           <p class="mt-8 text-xl text-gray-400 text-center" id="description">
-            Mi fuerte es el frontend moderno: Vue, Angular, Tailwind, Vite.
-            Y también he tenido mis batallas con WordPress, Drupal o Typo3.
-            Lo importante: sé adaptarme, sé leer código ajeno, y me importa que lo que entrego sea accesible, mantenible y limpio.
+            {{ summary.content }}
           </p>
         </div>
         <section class="absolute top-0 bottom-0 w-screen -left-52 -z-1">
