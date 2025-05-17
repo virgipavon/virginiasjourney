@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Space Grotesk", system-ui;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,4 +13,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .marker {
+  font-family: "Press Start 2P", system-ui;
+  word-spacing: -0.5em;
+  line-height: 1.2em;
+}
+
+h1 {
+  text-transform: uppercase;
 }
