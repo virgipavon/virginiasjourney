@@ -12,6 +12,11 @@
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import { ScrollSmoother } from "gsap/ScrollSmoother";
 
+  import { useCV } from '../composables/useCV'
+
+  const { sections, getSectionById } = useCV()
+  const intro = getSectionById('intro')
+
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrambleTextPlugin);
 
   onMounted(() => {
@@ -74,30 +79,14 @@
     "#description",
     {
       opacity: 0,
-      x: "-100%",
-    },
-    {
-      duration: 1.5,
-      opacity: 1,
-      x: 0,
-      ease: "power3.inOut",
-      delay: 0.5,
-    }
-  );
-
-  gsap.fromTo(
-    ".main-btn",
-    {
-      opacity: 0,
       y: "100%",
     },
     {
       duration: 1.5,
       opacity: 1,
       y: 0,
-      delay: 1.3,
       ease: "power3.inOut",
-      stagger: 0.1,
+      delay: 0.5,
     }
   );
 
@@ -130,34 +119,23 @@
 </script>
 
 <template>
-  <div id="smooth-wrapper" class="min-h-screen py-12 px-10 lg:px-52">
+  <div id="smooth-wrapper" class="min-h-screen py-6 px-10 lg:px-52">
     <div id="smooth-content">
       <div class="flex flex-col items-center justify-center min-h-screen">
-        <h1>¡Hola!</h1>
-        <h2
-          class="text-center overflow-hidden pb-5 font-bold text-7xl text-transparent bg-clip-text bg-gradient-to-br from-[#f1ffa0] to-[#00a89d]"
+        <img src="../assets/vir.png" class="img h-25 mb-10" alt="me" />
+        <h5>{{ intro.intro }}</h5>
+        <h1
+          class="text-xl uppercase mt-10 text-center overflow-hidden pb-5 font-bold text-7xl text-transparent bg-clip-text bg-gradient-to-br from-[#fd8904] to-[#8c069e]"
           id="heading">
-          Me llamo Virginia
-        </h2>
-        <p class="mt-8 text-xl text-gray-400 text-center" id="description">
-          Soy Frontend developer, con más de 10 años de experiencia escribiendo código para proyectos reales. De cuando testeábamos en internet explorer.
+          {{ intro.titla }}
+        </h1>
+        <p class="mt-8 text-base text-gray-400 text-center" id="description">
+          {{ intro.content }}
         </p>
-        <div class="flex mt-16">
-          <button
-            class="main-btn w-48 p-4 text-white rounded-lg shadow-lg bg-gradient-to-br from-emerald-200 via-emerald-400 to-emerald-500 shadow-emerald-400/60"
-          >
-            <p class="text-lg font-semibold">Explore nature</p>
-          </button>
-          <button
-            class="main-btn w-48 p-4 ml-4 text-green-500 border-2 border-green-400 rounded-lg shadow-lg shadow-emerald-400/60"
-          >
-            <p class="text-lg font-semibold">Learn more</p>
-          </button>
-        </div>
-        <div class="mt-16">
+        <div class="mt-10">
           <div
             id="downArrow"
-            class="flex items-center justify-center w-16 h-16"
+            class="flex items-center justify-center w-16 h-14 img"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -189,3 +167,22 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .img {
+    filter: drop-shadow(0 0 1em #05f4a8) drop-shadow(0 0 2em #8c069e);
+    opacity: .7;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 1em #f309ef) drop-shadow(0 0 2em #8c069e);
+  }
+  .logo.vue:hover {
+    filter: drop-shadow(0 0 1em #05f4a8) drop-shadow(0 0 2em #8c069e);
+  }
+</style>

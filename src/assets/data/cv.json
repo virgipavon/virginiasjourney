@@ -1,0 +1,65 @@
+{
+  "cv": [
+    {
+      "id": "intro",
+      "intro": "Hola.",
+      "title": "Me llamo Virginia",
+      "content": "Frontend developer, con más de 10 años de experiencia escribiendo código para proyectos reales. De los que se rompen, se arreglan, se actualizan, y a veces te quitan el sueño (pero no el sentido del humor)."
+    },
+    {
+      "id": "summary",
+      "title": "Trabajo en desarrollo web desde que las webs se veían en Internet Explorer… y sobreviví.",
+      "content": "Mi fuerte es el frontend moderno: Vue, Angular, Tailwind, Vite.\nY también he tenido mis batallas con WordPress, Drupal o Typo3.\nLo importante: sé adaptarme, sé leer código ajeno, y me importa que lo que entrego sea accesible, mantenible y limpio"
+    },
+    {
+      "id": "experience",
+      "title": "Estos son algunos de los sitios en los que han contando conmigo",
+      "content": [
+        {
+          "job": {
+            "title": "INECO (2023 – ahora)",
+            "content": "Actualmente trabajo en INECO, desarrollando con Angular y Vue, y jugando con servicios de AWS: Cognito, Amplify, Lambda… También me encargo de automatizaciones con GitLab. Las reuniones son en GMT, pero yo sigo programando en CET con café."
+          }
+        },
+        {
+          "job": {
+            "title": "UNIR (2020 – 2023)",
+            "content": "Tres años manteniendo la web institucional de UNIR. WordPress, estructura heredada, plugins que no firmaría nadie. Aun así, metí mejoras donde se podía: accesibilidad, rendimiento, pequeños scripts. Fue duro, pero aprendí una barbaridad."
+          }
+        },
+        {
+          "job": {
+            "title": "ELEGRA / Ferrovial (2019 – 2020)",
+            "content": "Aquí hice una de las cosas que más me enorgullece: la web corporativa de Ferrovial, que ganó premios internacionales. Yo me ocupé de gran parte de la accesibilidad AA (WCAG 2.1), algo que me tomé muy en serio. Usamos Vue, Sass, Pug y… Gulp. Sí, Gulp. Qué tiempos."
+          }
+        },
+        {
+          "job": {
+            "title": "También trabajé en ARCMEDIA",
+            "content": "donde empecé en serio con portales grandes, multilingües y bastante más exigentes de lo que esperaba. Ahí aprendí a optimizar, a trabajar en equipo, y a no subestimar el CSS de nadie."
+          }
+        }
+      ]
+    },
+    {
+      "id": "studies",
+      "title": "Estudié desarrollo de aplicaciones informáticas",
+      "content": "Y luego me especialicé en diseño, desarrollo y comunicación digital. Aprendí tanto de diseño como de código. Y creo que se nota."
+    },
+    {
+      "id": "languages",
+      "title": "I can speak English. I am agree",
+      "content": "Nivel C1. Me he acostumbrado a leer documentación en inglés, trabajar con gente de otros países y discutir con APIs sin subtítulos."
+    },
+    {
+      "id": "skills",
+      "title": "¿En qué soy buena?",
+      "content": "En escribir código limpio que se pueda mantener.\nEn detectar lo que va a dar problemas antes de que lo dé.\nEn accesibilidad, en pensar en usuarios reales.\nY en no rendirme cuando algo se rompe, aunque el error empiece con “undefined is not a function”."
+    },
+    {
+      "id": "next",
+      "title": "¿Y ahora qué?",
+      "content": "Ahora quiero seguir creciendo.\nMeterme más en backend, en IA aplicada, en proyectos donde se valore el cuidado del código.\nY si puede ser, con un equipo humano y con sentido del humor."
+    }
+  ]
+}
