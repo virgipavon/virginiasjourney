@@ -2,13 +2,13 @@
   "cv": [
     {
       "id": "intro",
-      "intro": "Hola.",
+      "intro": "¡Hola!",
       "title": "Me llamo Virginia",
-      "content": "Frontend developer, con más de 10 años de experiencia escribiendo código para proyectos reales. De los que se rompen, se arreglan, se actualizan, y a veces te quitan el sueño (pero no el sentido del humor)."
+      "content": "Soy una Frontend developer, con más de 10 años de experiencia escribiendo código para proyectos reales. De los que se rompen, se arreglan, se actualizan, y a veces te quitan el sueño (pero no el sentido del humor)."
     },
     {
       "id": "summary",
-      "title": "Trabajo en desarrollo web desde que las webs se veían en Internet Explorer… y sobreviví.",
+      "title": "Llevo 10 años trabajando en desarrollo: de los divs flotantes a los componentes reactivos… y aún debugueando promesas rotas, las del sistema, no solo del código.",
       "content": "Mi fuerte es el frontend moderno: Vue, Angular, Tailwind, Vite.\nY también he tenido mis batallas con WordPress, Drupal o Typo3.\nLo importante: sé adaptarme, sé leer código ajeno, y me importa que lo que entrego sea accesible, mantenible y limpio"
     },
     {
