@@ -1,41 +1,26 @@
 <script setup>
-  import gsap from "gsap";
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-  import { ScrollSmoother } from "gsap/ScrollSmoother";
-  import { onMounted } from "vue";
 
   import { useCV } from '../composables/useCV'
 
   const { sections, getSectionById } = useCV()
   const summary = getSectionById('summary')
-
-  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-  onMounted(() => {
-    ScrollSmoother.create({
-      wrapper: '.smooth-wrapper',
-      content: '.smooth-content',
-      smooth: 1.5,
-      effects: true
-    });
-  })
 </script>
 
 <template>
-  <div v-if="summary" class="flex flex-col items-center justify-center min-h-screen bg-emerald relative">
-    <div class="smooth-wrapper min-h-screen">
-      <div class="smooth-content will-change-transform h-full">
+  <div v-if="summary">
+    <div class="flex flex-col items-center justify-center min-h-screen relative">
+      <div class="will-change-transform h-full">
         <div>
           <h3
-            class="text-xl uppercase filter-black overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#8c069e] to-[#00a89d]">
+            class="text-base uppercase filter-black overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#8c069e] to-[#fd8904]">
             {{ summary.title }}
           </h3>
-          <p class="filter-black mt-8 text-lg text-gray-400 text-center" id="description">
+          <p class="filter-black mt-8 text-base text-gray-400 text-center" id="description">
             {{ summary.content }}
           </p>
         </div>
         <section class="absolute top-0 bottom-0 w-screen -left-52 -z-1">
-          <div class="logo top-6 right-18 h-27" data-speed="1.5">
+          <div class="logo -top-8 right-18 h-27" data-speed="1.5">
             <img src="../assets/logos/js.svg" alt="js" />
           </div>
           <div class="logo top-2 left-5 h-24" data-speed="1.2">
@@ -53,7 +38,7 @@
           <div class="logo top-75 left-78 h-2" data-speed="1.5">
             <img src="../assets/logos/python.svg" alt="python" />
           </div>
-          <div class="logo top-1 -left-40 h-1" data-speed="1.6">
+          <div class="logo -top-1 -left-40 h-1" data-speed="1.6">
             <img src="../assets/logos/cypress.svg" alt="cypress" />
           </div>
           <div class="logo top-26 right-28 h-17" data-speed="1.1">
@@ -68,7 +53,7 @@
           <div class="logo top-83 -left-27 h-5" data-speed="1.3">
             <img src="../assets/logos/wordpress.svg" alt="wordpress" />
           </div>
-          <div class="logo top-5 -right-30 h-13" data-speed="1.2">
+          <div class="logo -top-5 -right-30 h-13" data-speed="1.2">
             <img src="../assets/logos/drupal.svg" alt="drupal" />
           </div>
           <div class="logo top-17 left-98 h-2" data-speed="1.5">
@@ -83,7 +68,7 @@
           <div class="logo top-43 left-40 h-4" data-speed="1.2">
             <img src="../assets/logos/angular.svg" alt="angular" />
           </div>
-          <div class="logo top-15 left-20 h-2" data-speed="1.8">
+          <div class="logo -top-15 left-20 h-2" data-speed="1.8">
             <img src="../assets/logos/huggingface.svg" alt="huggingface" />
           </div>
           <div class="logo top-51 right-62 h-5" data-speed="1.1">
@@ -125,7 +110,7 @@
 
   .gradient-bits:nth-of-type(even) {
     width: 0.5rem;
-    background: linear-gradient(to bottom right, #00a89d, transparent);
+    background: linear-gradient(to bottom right, #eaff00, transparent);
   }
 
   .logo {
@@ -136,9 +121,5 @@
 
   .logo:nth-of-type(even) {
     max-width: 1.5rem;
-  }
-
-  .filter-black {
-    filter: drop-shadow(0 0 1em #000000) drop-shadow(0 0 2em #000000);
   }
 </style>
