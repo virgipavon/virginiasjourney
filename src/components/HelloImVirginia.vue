@@ -3,8 +3,9 @@
   import WorkExperience from './WorkExperience.vue'
   import Studies from './Studies.vue'
   import Languages from './Languages.vue'
-  import SoftSkills from './SoftSkills.vue'
+  import KeyProjects from './KeyProjects.vue'
   import NextSteps from './NextSteps.vue'
+  import Technologies from './Technologies.vue'
 
   import FaceIcon from '../icons/face.vue'
   import Line from '../icons/line.vue'
@@ -34,8 +35,9 @@
       ".marker-exp",
       ".marker-stu",
       ".marker-lang",
-      ".marker-skills",
-      ".marker-next"
+      ".marker-projects",
+      ".marker-next",
+      ".marker-tech"
     ];
 
     for (let i = 0; i < markers.length - 1; i++) {
@@ -230,11 +232,13 @@
 
       <WorkExperience/>
 
-      <Studies />
+      <KeyProjects />
 
       <Languages />
 
-      <SoftSkills />
+      <Studies />
+
+      <Technologies />
 
       <NextSteps />
 

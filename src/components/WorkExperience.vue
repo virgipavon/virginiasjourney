@@ -12,7 +12,7 @@
       class="filter-black text-base uppercase overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#00a89d] to-[#4aff02]">
       {{ jobs.title }}
     </h3>
-    <div class="flex flex-col mt-10">
+    <div class="flex mt-10 gap-5 w-[200vw]">
       <div
         v-for="(item, index) in jobs.content"
         :key="index"
@@ -20,8 +20,9 @@
           ? 'bg-gradient-to-br from-[#161616] to-[#00a89d]'
           : 'bg-gradient-to-br from-[#161616] to-[#4aff02]' ]"
         class="p-[2px] rounded-xl mb-10 min-h-[200px]">
-        <div class="bg-[#242424] rounded-[10px] p-10 min-h-[196px]">
-          <h5 class= "text-[#1DC884] text-[0.7em] mb-5">{{ item.job.title }}</h5>
+        <div class="bg-[#242424] rounded-[10px] p-10 min-h-[196px] h-full">
+          <h5 class= "text-[#1DC884] text-[0.7em] mb-2">{{ item.job.title }}</h5>
+          <p class="mb-4 text-[#00a89d] text-sm">{{ item.job.date }}</p>
           <p class="text-gray-400">{{ item.job.content }}</p>
         </div>
       </div>
