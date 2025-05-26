@@ -4,12 +4,12 @@
       "id": "intro",
       "intro": "¡Hola!",
       "title": "Me llamo Virginia",
-      "content": "Soy una Frontend developer, con más de 10 años de experiencia escribiendo código para proyectos reales. De los que se rompen, se arreglan, se actualizan, y a veces te quitan el sueño (pero no el sentido del humor)."
+      "content": "Llevo 10 años trabajando en desarrollo: de los divs flotantes a los componentes reactivos… y aún debugueando promesas rotas, las del sistema, no solo del código."
     },
     {
       "id": "summary",
-      "title": "Llevo 10 años trabajando en desarrollo: de los divs flotantes a los componentes reactivos… y aún debugueando promesas rotas, las del sistema, no solo del código.",
-      "content": "Mi fuerte es el frontend moderno: Vue, Angular, Tailwind, Vite.\nY también he tenido mis batallas con WordPress, Drupal o Typo3.\nLo importante: sé adaptarme, sé leer código ajeno, y me importa que lo que entrego sea accesible, mantenible y limpio"
+      "title": "Explorando IA y optimizando procesos sin convertir reuniones en monólogos de terror",
+      "content": "Trabajo como desarrolladora front, tengo más de 10 años de experiencia en entornos corporativos, trabajando con Vue.js, Angular y metodologías modernas (BEM, CI/CD, accesibilidad, AWS). Tengo alta capacidad de adaptación y foco en la calidad del código. Actualmente, estoy interesada en seguir creciendo técnicamente en nuevas áreas como integraciones complejas, Python y herramientas de IA aplicadas. Desde que empecé en el desarrollo, siempre he disfrutado crear interfaces que no solo se vean bien, sino que sean funcionales y eficientes. Durante mi trayectoria, he trabajado en sectores como educación, banca, multinacionales o la administración pública, desarrollando productos digitales que facilitan la vida de los usuarios y mejoran la experiencia en la web."
     },
     {
       "id": "experience",
@@ -17,26 +17,30 @@
       "content": [
         {
           "job": {
-            "title": "INECO (2023 – ahora)",
-            "content": "Actualmente trabajo en INECO, desarrollando con Angular y Vue, y jugando con servicios de AWS: Cognito, Amplify, Lambda… También me encargo de automatizaciones con GitLab. Las reuniones son en GMT, pero yo sigo programando en CET con café."
+            "title": "INECO",
+            "date": "Abril 2023 - Actual",
+            "content": "Actualmente trabajo en INECO como desarrolladora frontend. He estado involucrada en varios proyectos, como IGAE, donde trabajé con Angular desarrollando funcionalidades internas, y ahora en la SEDIA, un proyecto en el que utilicé Vue junto con servicios de AWS. En este último integré Cognito, Amplify y funciones Lambda, además de diseñar componentes escalables y seguros. También participé en la configuración de los pipelines de integración y despliegue continuo usando GitLab."
           }
         },
         {
           "job": {
-            "title": "UNIR (2020 – 2023)",
-            "content": "Tres años manteniendo la web institucional de UNIR. WordPress, estructura heredada, plugins que no firmaría nadie. Aun así, metí mejoras donde se podía: accesibilidad, rendimiento, pequeños scripts. Fue duro, pero aprendí una barbaridad."
+            "title": "UNIR",
+            "date": "Septiembre 2020 - Abril 2023",
+            "content": "Estuve trabajando en UNIR, la Universidad Internacional de La Rioja, donde me encargaba del mantenimiento y la evolución de su web institucional, que está basada en WordPress. Allí trabajé con Vanilla JavaScript, Cypress para los tests automatizados, y Sass para los estilos."
           }
         },
         {
           "job": {
-            "title": "ELEGRA / Ferrovial (2019 – 2020)",
-            "content": "Aquí hice una de las cosas que más me enorgullece: la web corporativa de Ferrovial, que ganó premios internacionales. Yo me ocupé de gran parte de la accesibilidad AA (WCAG 2.1), algo que me tomé muy en serio. Usamos Vue, Sass, Pug y… Gulp. Sí, Gulp. Qué tiempos."
+            "title": "ELEGRA / Ferrovial",
+            "date": "Marzo 2019 - Septiembre 2020",
+            "content": "Aquí hice una de las cosas que más me enorgullece: la web corporativa de Ferrovial, que ganó varios premios internacionales. Especialmente enfocada en accesibilidad, donde alcanzamos el nivel AA siguiendo los estándares WCAG 2.1. Utilizamos tecnologías como Vue.js, JavaScript, Gulp, Pug y Sass, y aplicamos metodologías como BEM y diseño responsive para asegurar una experiencia óptima en todos los dispositivos."
           }
         },
         {
           "job": {
-            "title": "También trabajé en ARCMEDIA",
-            "content": "donde empecé en serio con portales grandes, multilingües y bastante más exigentes de lo que esperaba. Ahí aprendí a optimizar, a trabajar en equipo, y a no subestimar el CSS de nadie."
+            "title": "ARCMEDIA",
+            "date": "Marzo 2016 - Junio 2018",
+            "content": "Durante esta etapa trabajé en una gran variedad de proyectos, principalmente para sectores como la banca, la salud y organizaciones benéficas. Trabajamos en desarrollos muy distintos entre sí, que iban desde webs corporativas hasta plataformas complejas con requisitos específicos. Formaba parte de un equipo internacional y el idioma de trabajo era el inglés, lo que me permitió ganar soltura en entornos multiculturales. A nivel técnico, utilicé tecnologías frontend como JavaScript, Sass, Gulp y distintos CMS, con un enfoque constante en la calidad, el rendimiento y la experiencia de usuario."
           }
         }
       ]
@@ -44,17 +48,98 @@
     {
       "id": "studies",
       "title": "Estudié desarrollo de aplicaciones informáticas",
-      "content": "Y luego me especialicé en diseño, desarrollo y comunicación digital. Aprendí tanto de diseño como de código. Y creo que se nota."
+      "subtitle": "Y luego me especialicé en diseño, desarrollo y comunicación digital. Aprendí tanto de diseño como de código. Y creo que se nota.",
+      "content": [
+        {
+          "studies": {
+            "title": "TÉCNICO SUPERIOR EN DESARROLLO DE APLICACIONES INFORMÁTICAS"
+          }
+        },
+        {
+          "studies": {
+            "title": "MÁSTER DISEÑO, DESARROLLO Y COMUNICACIÓN DIGITAL"
+          }
+        }
+      ]
     },
     {
       "id": "languages",
-      "title": "I can speak English. I am agree",
-      "content": "Nivel C1. Me he acostumbrado a leer documentación en inglés, trabajar con gente de otros países y discutir con APIs sin subtítulos."
+      "title": "I can speak English",
+      "content": "Inglés nivel C1 (gracias, Kings College). Lo utilizo de forma habitual en documentación técnica y en reuniones con equipos distribuidos por medio planeta. Estoy acostumbrada a trabajar en entornos donde la colaboración multilingüe y la coordinación entre distintos husos horarios son parte del día a día."
     },
     {
-      "id": "skills",
-      "title": "¿En qué soy buena?",
-      "content": "En escribir código limpio que se pueda mantener.\nEn detectar lo que va a dar problemas antes de que lo dé.\nEn accesibilidad, en pensar en usuarios reales.\nY en no rendirme cuando algo se rompe, aunque el error empiece con “undefined is not a function”."
+      "id": "projects",
+      "title": "Cosas que he hecho y de las que estoy bastante orgullosa",
+      "content": [
+        {
+          "project": {
+            "title": "FERROVIAL.COM",
+            "url": "https://www.ferrovial.com/",
+            "desc": "Mejor web corporativa (Ragan Pr Daily’s, European Excellence, Agripina). Mejor soporte digital en los premios Dircom 2020. Tecnologías: Vue.js, JSON, JavaScript."
+          }
+        },
+        {
+          "project": {
+            "title": "UNIR.NET",
+            "url": "https://www.unir.net/",
+            "desc": "Proyecto institucional de alto tráfico.Tecnologías: Sass, BEM, JSON, JavaScript, Cypress, Wordpress,"
+          }
+        }
+      ]
+    },
+    {
+      "id": "technologies",
+      "title": "Tecnologías que manejo (o he trabajado con ellas)",
+      "content": [
+        {
+          "type": {
+            "title": "Lenguajes:",
+            "desc": "JavaScript (ES6+), HTML5, CSS3, JSON, Pug"
+          }
+        },
+        {
+          "type": {
+            "title": "Frameworks:",
+            "desc": "Vue.js, Angular, Cypress, TailwindCSS, Vite"
+          }
+        },
+        {
+          "type": {
+            "title": "Automatización:",
+            "desc": "Gulp (proyectos legacy), Vite (proyectos actuales)"
+          }
+        },
+        {
+          "type": {
+            "title": "Backend:",
+            "desc": "Python (En progreso)"
+          }
+        },
+        {
+          "type": {
+            "title": "Cloud:",
+            "desc": "AWS (Cognito, Amplify, Lambda, IAM)"
+          }
+        },
+        {
+          "type": {
+            "title": "DevOps:",
+            "desc": "GitLab CI/CD"
+          }
+        },
+        {
+          "type": {
+            "title": "CMS:",
+            "desc": "WordPress, Drupal, Typo3"
+          }
+        },
+        {
+          "type": {
+            "title": "Buenas prácticas:",
+            "desc": "Accesibilidad AA, BEM, Responsive Design, optimización de rendimiento con herramientas como Vite y TailwindCSS."
+          }
+        }
+      ]
     },
     {
       "id": "next",

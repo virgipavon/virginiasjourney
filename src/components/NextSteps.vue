@@ -12,7 +12,7 @@
       class="text-xl uppercase overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#8c069e] to-[#00a89d]">
       {{ next.title }}
     </h3>
-    <p class="mt-8 text-lg text-gray-400 text-center" id="description">
+    <p class="mt-8 text-lg text-gray-400 text-center">
       {{ next.content }}
     </p>
   </div>

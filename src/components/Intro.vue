@@ -15,7 +15,7 @@
             class="text-base uppercase filter-black overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#8c069e] to-[#fd8904]">
             {{ summary.title }}
           </h3>
-          <p class="filter-black mt-8 text-base text-gray-400 text-center" id="description">
+          <p class="filter-black mt-8 text-base text-gray-400 text-center">
             {{ summary.content }}
           </p>
         </div>
