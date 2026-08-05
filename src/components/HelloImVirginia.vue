@@ -6,9 +6,9 @@
   import KeyProjects from './KeyProjects.vue'
   import NextSteps from './NextSteps.vue'
   import Technologies from './Technologies.vue'
+  import LineAnimation from './LineAnimation.vue'
 
   import FaceIcon from '../icons/face.vue'
-  import Line from '../icons/line.vue'
 
   import gsap from "gsap";
   import { onMounted } from "vue";
@@ -95,60 +95,6 @@
 
   cicloParpadeo();
 
-  const path = document.querySelector("#line");
-  const length = path.getTotalLength();
-
-  // Inicializa la línea invisible
-  gsap.set(path, {
-    strokeDasharray: length,
-    strokeDashoffset: length
-  });
-
-  // Animaciones con flags para evitar repeticiones
-  let visible = false;
-
-  function dibujarLinea() {
-    if (visible) return;
-    visible = true;
-    gsap.set(path, {
-      strokeDasharray: length,
-      strokeDashoffset: length
-    });
-    gsap.to(path, {
-      strokeDashoffset: 0,
-      duration: 1.5,
-      ease: "power1.inOut"
-    });
-  }
-
-  function borrarLinea() {
-    if (!visible) return;
-    visible = false;
-    gsap.set(path, {
-      strokeDasharray: length,
-      strokeDashoffset: 0
-    });
-    gsap.to(path, {
-      strokeDasharray: length,
-      strokeDashoffset: -length,
-      duration: 1.5,
-      ease: "power1.inOut"
-    });
-  }
-
-  // Al cargar: dibujar la línea
-  dibujarLinea();
-
-  // Scroll: borrar al bajar, pintar al volver arriba
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    if (scrollTop > 50) {
-      borrarLinea();
-    } else {
-      dibujarLinea();
-    }
-  });
-
   ScrollTrigger.refresh()
   })
 </script>
@@ -201,6 +147,8 @@
       <Technologies />
 
       <NextSteps />
+      
+      <LineAnimation />
 
     </div>
   </div>
