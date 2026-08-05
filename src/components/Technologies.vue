@@ -7,7 +7,6 @@
 
 <template>
   <div class="flex flex-col justify-center min-h-screen bg-emerald relative">
-    <p class="text-[0.7em] marker marker-tech uppercase text-emerald-500 font-bold absolute top-0 -right-[17em]">Tecnologías</p>
     <h3
       class="text-base uppercase filter-black overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#8c069e] to-[#fd8904]">
       {{ technologies.title }}

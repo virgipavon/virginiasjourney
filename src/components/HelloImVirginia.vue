@@ -30,46 +30,6 @@
       effects: true,
       smoothTouch: 0.1,
     });
-
-    const markers = [
-      ".marker-exp",
-      ".marker-stu",
-      ".marker-lang",
-      ".marker-projects",
-      ".marker-next",
-      ".marker-tech"
-    ];
-
-    for (let i = 0; i < markers.length - 1; i++) {
-      const current = markers[i];
-      const next = markers[i + 1];
-
-      gsap.fromTo(
-        current,
-        { opacity: 1 },
-        {
-          opacity: 0,
-          scrollTrigger: {
-            trigger: current,
-            start: "center center",
-            endTrigger: next,
-            end: "center+=1000 center",
-            scrub: 0.3,
-            pin: true,
-            pinSpacing: false
-          }
-        }
-      );
-
-    }
-
-    ScrollTrigger.create({
-      trigger: markers[markers.length - 1],
-      start: "center center",
-      end: () => `${document.body.scrollHeight - window.innerHeight}px`,
-      pin: true,
-      pinSpacing: false
-    });
      
     gsap.to("#heading", {
       duration: 1.5,

@@ -7,7 +7,6 @@
 
 <template>
   <div class="flex flex-col items-center justify-center min-h-screen relative mt-30">
-    <p class="text-[0.7em] marker marker-exp uppercase text-[#1AC587] font-bold absolute top-0 -right-[17em]">Experiencia</p>
     <h3
       class="filter-black text-base uppercase overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#00a89d] to-[#4aff02]">
       {{ jobs.title }}
