@@ -6,16 +6,18 @@
 </script>
 
 <template>
-  <div class="flex flex-col justify-center min-h-screen bg-emerald relative">
+  <div class="flex flex-col justify-center min-h-screen bg-emerald relative text-center">
     <h3
-      class="text-base uppercase filter-black overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#8c069e] to-[#fd8904]">
+      class="filter-black overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#8c069e] to-[#fd8904]">
       {{ technologies.title }}
     </h3>
     <div v-for="(item, index) in technologies.content"
     class="bg-[#242424] py-5 h-full"
     :key="index">
-      <h5 class= "text-[#B34D84] text-[0.7em] mb-2">{{ item.type.title }}</h5>
-      <p class="text-gray-400">{{ item.type.desc }}</p>
+      <h5 class= "text-[#CE656C] text-2xl mb-2">{{ item.type.title }}</h5>
+      <div v-for="(item, index) in item.type.desc">
+        <p class="bg-gradient-to-br from-[#161616] to-[#8c069e]">{{ item }}</p>
+      </div>
     </div>
   </div>
 </template>

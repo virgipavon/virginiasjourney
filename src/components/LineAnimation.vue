@@ -68,7 +68,7 @@
 </script>
 
 <template>
-  <div id="smooth-wrapper" class="min-h-screen py-6 px-10 lg:px-52">
+  <div id="smooth-wrapper" class="min-h-screen py-6 px-10 lg:px-52 absolute z-999">
     <div id="smooth-content">
       <div class="flex flex-col items-center justify-center min-h-screen">
         <div class="absolute -right-52 -left-52 -z-1"><Line /></div>

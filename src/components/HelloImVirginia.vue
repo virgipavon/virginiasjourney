@@ -88,7 +88,7 @@
       ease: "none",
       onComplete: () => {
         gsap.set("#blink", { opacity: 0 }); 
-        setTimeout(cicloParpadeo, 5000);
+        setTimeout(cicloParpadeo, 2000);
       }
     });
   }
@@ -105,16 +105,16 @@
       <div class="flex flex-col items-center justify-center min-h-screen">
         <div class="absolute -right-52 -left-52 -z-1"><Line /></div>
         <div class="img"><FaceIcon /></div>
-        <h5 class="mt-5">{{ intro.intro }}</h5>
+        <h5 class="mt-10 font-bold text-5xl">{{ intro.intro }}</h5>
         <h1
-          class="filter-black text-xl uppercase mt-10 text-center overflow-hidden pb-5 font-bold text-7xl text-transparent bg-clip-text bg-gradient-to-br from-[#fd8904] to-[#8c069e]"
+          class="filter-black mt-10 text-center overflow-hidden pb-5 font-bold text-7xl text-transparent bg-clip-text bg-gradient-to-br from-[#fd8904] to-[#8c069e]"
           id="heading">
           {{ intro.titla }}
         </h1>
-        <p class="mt-8 text-base text-gray-400 text-center" id="description">
+        <p class="mt-8 text-3xl text-center" id="description">
           {{ intro.content }}
         </p>
-        <div class="mt-10">
+        <div class="mt-15">
           <div
             id="downArrow"
             class="flex items-center justify-center w-16 h-14 img"

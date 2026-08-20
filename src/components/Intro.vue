@@ -10,12 +10,12 @@
   <div v-if="summary">
     <div class="flex flex-col items-center justify-center min-h-screen relative">
       <div class="will-change-transform h-full">
-        <div>
+        <div class="text-center">
           <h3
-            class="text-base uppercase filter-black overflow-hidden pb-5 font-bold text-5xl text-transparent text-center bg-clip-text bg-gradient-to-br from-[#8c069e] to-[#fd8904]">
+            class="filter-black overflow-hidden pb-5 font-bold text-5xl text-transparent bg-clip-text bg-gradient-to-br from-[#8c069e] to-[#fd8904]">
             {{ summary.title }}
           </h3>
-          <p class="filter-black mt-8 text-base text-gray-400 text-center">
+          <p class="filter-black mt-8">
             {{ summary.content }}
           </p>
         </div>
